@@ -1,0 +1,45 @@
+<view class="container" wx:if="{{!loading}}">
+    <view class="has-card" wx:if="{{hasCard}}">
+        <view class="swiper-container">
+            <image class="swiper-bg" src="../../imgs/swiper_bg_b.jpg"></image>
+             <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" bindchange="changeCurrentIdx">
+                <block wx:for="{{cardList}}" wx:for-index="idx" wx:key="{{idx}}">
+                    <swiper-item>
+                        <view class="swiper-item" data-index="{{idx}}" catchtap="onSwiperTap">
+                            <Card info="{{item.info}}" type="{{item.type}}"></Card> 
+                            <view class="mask" wx:if="{{selectIndex === idx}}">
+                                 <text class="edit" data-index="{{idx}}" catchtap="editCard">编辑</text>
+                                <text class="del" data-index="{{idx}}" catchtap="delCard">删除</text> 
+                            </view>  
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper> 
+        </view>
+        <view class="operation-btn">
+            <view class="btn">
+                <image src="../../imgs/add.jpg" class="icon-img" catchtap="selectTemplate"></image>
+                <text class="icon-desc">添加名片</text>
+            </view>
+            <view class="btn">
+                <button open-type="share" class="share-btn">
+                <image src="../../imgs/share.jpg" class="icon-img"></image>
+                <text class="icon-desc">分享名片</text>
+                </button>
+                
+            </view>
+            <view class="btn">
+                <image src="../../imgs/create.jpg" class="icon-img" bindtap="createImg"></image>
+                <text class="icon-desc">生成图片</text>
+            </view>
+        </view>
+    </view>
+    <view class="no-card" wx:else>
+        <view class="text-wrapper">
+            <text class="no-card-text">还没有名片</text>
+            <text class="no-card-text">快去创建一张吧</text>
+        </view>
+        <image src="../../imgs/no_card_bg.jpg" class="no-card-img"></image>
+        <view class="create-btn" bindtap="addFirstCard">创建我的第一张名片</view>
+    </view>
+</view>

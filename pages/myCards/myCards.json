@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "Card": "/common/card/card"
+    }
+}

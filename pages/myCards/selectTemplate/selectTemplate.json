@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "选择样式",
+    "usingComponents": {
+        "Card": "/common/card/card"
+    }
+}

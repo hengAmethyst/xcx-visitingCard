@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="card-container" bindtap="gotoEdit">
+        <Card type="white" data-category="white" catchtap="addCard"></Card>
+    </view>
+    <view class="card-container">
+        <Card type="black" data-category="black" catchtap="addCard"></Card>
+    </view>
+    <view class="card-container">
+        <Card type="red" data-category="red" catchtap="addCard"></Card>
+    </view>
+</view>

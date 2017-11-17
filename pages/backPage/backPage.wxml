@@ -1,0 +1,17 @@
+<!--pages/backPage/backPage.wxml-->
+<view class="back-page" wx:if="{{showDetail}}">
+  <view class="back-page-card">
+   <card type="{{type}}" info="{{info}}" class="card-item"></card> 
+  </view>
+  <!--按钮  -->
+  <view class="create-btn">
+    <view class="create-btn-box" catchtap="collectCard" data-type="1">
+      <text>收录并创建我的名片</text>
+    </view>
+  </view>
+  <view class="onlySave-btn">
+    <view class="onlySave-btn-box" catchtap="collectCard" data-type="2">
+      <text>收录到我的名片夹</text>
+    </view>
+  </view>
+</view>

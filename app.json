@@ -1,0 +1,35 @@
+{
+    "pages": [
+        "pages/myCards/myCards",
+        "pages/myCards/editCard/editCard",
+        "pages/myCards/selectTemplate/selectTemplate",
+        "pages/cardClip/cardClip",
+        "pages/cardClip/cardDetail/cardDetial",
+        "pages/myCards/createImg/createImg",
+        "pages/backPage/backPage",
+        "pages/myCards/addCard/addCard"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "微名片",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#20b6be",
+        "list": [
+            {
+                "pagePath": "pages/myCards/myCards",
+                "text": "我的名片",
+                "iconPath": "imgs/myCards_default.png",
+                "selectedIconPath": "imgs/myCards.png"
+            },
+            {
+                "pagePath": "pages/cardClip/cardClip",
+                "text": "名片夹",
+                "iconPath": "imgs/cardClip_default.png",
+                "selectedIconPath": "imgs/cardClip.png"
+            }
+        ]
+    }
+}

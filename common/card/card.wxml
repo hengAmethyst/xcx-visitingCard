@@ -1,0 +1,58 @@
+<block wx:if="{{type == 'white'}}">
+    <view class="white card container">
+        <view class="core">
+            <view class="name-position">
+                <text class="name">{{info.name}} </text>
+                <text class="position">{{info.position}} </text>
+            </view>
+            <image class="logo" src="{{info.logo || '/imgs/logo1.png'}}"></image>
+        </view>
+        <view class="more">
+            <text class="company field">{{info.company}} </text>
+            <text class="field">{{info.phone}} </text>
+            <text class="field">{{info.otherOne}} </text>
+            <text class="field">{{info.otherTwo}} </text>
+            <text class="field">{{info.otherThree}} </text>
+        </view>
+    </view>
+</block>
+
+<block wx:if="{{type == 'black'}}">
+    <view class="black card container">
+        <view class="core">
+            <view class="name-position">
+                <text class="name">{{info.name}} </text>
+                <text class="position">{{info.position}} </text>
+            </view>
+            <image class="logo" src="{{info.logo || '/imgs/logo2.png'}}"></image>
+        </view>
+        <view class="more">
+            <text class="company field">{{info.company}} </text>
+            <text class="field">{{info.phone}} </text>
+            <text class="field">{{info.otherOne}} </text>
+            <text class="field">{{info.otherTwo}} </text>
+            <text class="field">{{info.otherThree}} </text>
+        </view>
+    </view>
+</block>
+
+<block wx:if="{{type === 'red'}}">
+    <view class="red card container">
+        <view class="core">
+            <view class="name-position">
+                <text class="name">{{info.name}} </text>
+                <text class="position">{{info.position}} </text>
+            </view>
+        </view>
+        <view class="more-container">
+            <view class="space"></view>
+            <view class="more">
+                <text class="company field">{{info.company}} </text>
+                <text class="field">{{info.phone}} </text>
+                <text class="field">{{info.otherOne}} </text>
+                <text class="field">{{info.otherTwo}} </text>
+                <text class="field">{{info.otherThree}} </text>
+            </view>
+        </view>
+    </view>
+</block>

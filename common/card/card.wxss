@@ -1,0 +1,248 @@
+.card.container {
+    width: 680rpx;
+    height: 388rpx;
+    box-sizing: border-box;
+    border-radius: 6rpx;
+    padding: 40rpx 50rpx 31rpx 46rpx;
+}
+
+.card.container .logo {
+    width: 88rpx;
+    height: 88rpx;
+    /* background-color: #999; */
+}
+
+/**
+ * white card
+ */
+
+.white.card.container {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4rpx 18rpx 0 rgba(0, 0, 0, 0.06);
+}
+
+.white.card.container .core {
+    display: flex;
+    flex-direction: row;
+    height: 100rpx;
+}
+
+.white.card.container .name-position {
+    width: 496rpx;
+    height: 163rpx;
+}
+
+.white.card.container .name {
+    display: block;
+    font-size: 42rpx;
+    font-weight: 600;
+    line-height: 50rpx;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.white.card.container .position {
+    display: block;
+    font-size: 22rpx;
+    line-height: 50rpx;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.white.card.container .logo {
+    /* position: absolute;
+    right: 0; */
+}
+
+.white.card.container .more {
+    margin-top: 41rpx;
+    width: 420rpx;
+}
+
+.white.card.container .more .field {
+    display: block;
+    line-height: 33rpx;
+    font-size: 22rpx;
+    color: #989898;
+    margin-bottom: 6rpx;
+    width: 420rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.white.card.container .more .company {
+    display: block;
+    color: #000;
+    margin-bottom: 16rpx;
+    width: 420rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/**
+ * black card
+ */
+
+.black.card.container {
+    background-color: #333639;
+    color: #000;
+    box-shadow: 0 4rpx 18rpx 0 rgba(0, 0, 0, 0.06);
+}
+
+.black.card.container .core {
+    display: flex;
+    flex-direction: row;
+    height: 100rpx;
+    /* position: relative; */
+}
+
+.black.card.container .name-position {
+    width: 496rpx;
+    height: 163rpx;
+    /* display: inline-block;
+    left: 0;
+    position: absolute; */
+}
+
+.black.card.container .name {
+    display: block;
+    font-size: 42rpx;
+    font-weight: 600;
+    line-height: 50rpx;
+    color: #fff;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.black.card.container .position {
+    display: block;
+    font-size: 22rpx;
+    /* letter-spacing: 8rpx; *//* text-align: center; */
+    line-height: 50rpx;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #d3d3d3;
+}
+
+.black.card.container .logo {
+    margin-top: 10rpx;
+    width: 175rpx;
+    height: 53rpx;
+}
+
+.black.card.container .more {
+    margin-top: 41rpx;
+    width: 420rpx;
+}
+
+.black.card.container .more .field {
+    display: block;
+    line-height: 33rpx;
+    font-size: 22rpx;
+    color: #d3d3d3;
+    margin-bottom: 6rpx;
+    width: 420rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.black.card.container .more .company {
+    margin-bottom: 16rpx;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #d3d3d3;
+}
+
+/**
+ * red card
+ */
+
+.red.card.container {
+    background-color: #cc3a4b;
+    color: #fff;
+    box-shadow: 0 4rpx 18rpx 0 rgba(0, 0, 0, 0.06);
+}
+
+.red.card.container .core {
+    height: 100rpx;
+    /* position: relative; */
+}
+
+.red.card.container .name-position {
+    /* width: 126rpx; */
+    width: 496rpx;
+    height: 100rpx;
+    /* display: inline-block;
+    left: 0;
+    position: absolute; */
+}
+
+.red.card.container .name {
+    display: block;
+    font-size: 42rpx;
+    font-weight: 600;
+    line-height: 50rpx;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.red.card.container .position {
+    display: block;
+    font-size: 22rpx;
+    text-align: left;
+    line-height: 50rpx;
+    width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.red.card.container .more-container {
+    display: flex;
+    margin-top: 41rpx;
+    flex-direction: row;
+    width: 584rpx;
+}
+.red.card.container .space{
+    width:164rpx;
+}
+
+.red.card.container .more {
+    width: 420rpx;
+}
+
+.red.card.container .more .field {
+    display: block;
+    font-size: 22rpx;
+    margin-bottom: 9rpx;
+    text-align: right;
+    width: 420rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.red.card.container .more .company {
+    margin-bottom: 19rpx;
+    font-weight: 600;
+    width: 420rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

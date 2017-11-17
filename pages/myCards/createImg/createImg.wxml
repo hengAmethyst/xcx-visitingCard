@@ -1,0 +1,19 @@
+<view>
+    <view class="imgArea">
+        <canvas canvas-id="myCanvas" class="imgs" />
+        <canvas canvas-id="myCanvas2" class="imgs2" />
+        <canvas canvas-id="myCanvas3" class="imgs3" />
+    </view>
+    <view class="createImg-btns">
+      <view class="createImg-btns-box">
+          <view class="create">
+              <image src="/imgs/create.png" class="create-icon" bindtap="previewCard"></image>
+              <text>生成名片图</text>
+          </view>
+          <view class="share">
+              <image src="/imgs/share.png" class="share-icon" bindtap="previewQrCode"></image>
+              <text>生成小程序码图</text>
+          </view>
+      </view>
+    </view>
+</view>

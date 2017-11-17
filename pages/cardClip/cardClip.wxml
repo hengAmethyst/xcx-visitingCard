@@ -1,0 +1,87 @@
+<!--pages/cardClip/cardClip.wxml-->
+
+  <view class="topSpace"></view>
+  <view class="select">
+    <!--list的头部  -->
+    <view class="select-title-box">
+      <view class="select-title" bindtap="showList">
+        <text>筛选</text>
+        <image src="/imgs/downArrow.png" wx:if="{{ifShowList}}"></image>
+        <image src="/imgs/upArrow.png" wx:else></image>
+      </view>
+    </view>
+    <!--我的标签和编辑标签title  -->
+    <view class="label-title" wx:if="{{ifShowList}}">
+      <view class="myLabels">
+        <text class="{{labelTitleColor==1?'label-title-active':''}}">我的标签</text>
+      </view>
+      <view class="editLabels" bindtap="showDelBtn">
+        <text class="{{labelTitleColor==2?'label-title-active':''}}">{{editLabelTiel}}</text>
+      </view>
+    </view>
+    <!--标签内容  -->
+    <view class="label-list" wx:if="{{ifShowList}}">
+      <view class="label-list-common">
+
+        <view class="label-common {{item.isClass?'label-active':''}}" bindtap="tapCommonLabel" wx:for="{{commonList}}"  data-labelCommon="{{item.isClass}}" data-labelCommonIndex="{{index}}">
+          <text>{{item.labelName}}</text>
+        </view>
+      </view>
+
+
+
+      <view class="label-list-box">
+        <view class="label-inner {{item.isClass?'label-active':''}}" bindtap="{{showDelBtn?'delLabel':'tapLabel'}}" wx:for="{{labelList}}"  data-labelClass="{{item.isClass}}" data-labelIndex="{{index}}" data-id="{{item.id}}">
+          <text>{{item.labelName}}</text>
+          <icon class="del-btn" type="clear" size="17" wx:if="{{showDelBtn}}"></icon>
+        </view>
+      
+        <view class="label-inner newLabel" wx:if="{{showNewLabel}}" bindtap="showDetailBox">
+          <text>+ 新建分组</text>
+        </view>
+      </view>
+    </view>
+
+    <!--重置/完成按钮  -->
+    <view class="controlBtn" wx:if="{{ifShowList}}">
+      <view class="resetBtn" bindtap="reset">
+        <text>重置</text>
+      </view>
+      <view class="finishBtn" bindtap="finish">
+        <text>完成</text>
+      </view>
+    </view>
+  </view>
+  <!--蒙版  -->
+  <view class="shadow" wx:if="{{ifShowList}}"></view>
+  <!--蒙版2  -->
+  <view class="shadow2" wx:if="{{addLabel}}"></view>
+  <!--添加分组的modal  -->
+  <view class="addLabel" wx:if="{{addLabel}}">
+    <view class="title">
+      <text>新建标签</text>
+    </view>
+    <view class="input">
+      <input placeholder='最多6个字' maxlength='6' bindinput="getInput"></input>
+    </view>
+    <view class="submit">
+      <view class="cancel" bindtap="cancel">取消</view>
+      <view class="sure" bindtap="sure">确认</view>
+    </view>
+  </view>
+  <view class="scrollBox">
+    <scroll-view scroll-y class="clipBox" lower-threshold="50" bindscrolltolower="reload">
+      <view class="cardClass" bindtap="gotoDetail" wx:for="{{cardList}}" wx:key="{{index}}">
+        <card type="{{item.cardInfo.templateName}}" info="{{item.cardInfo}}" data-id="{{item.cardId}}"></card>
+      </view>
+    </scroll-view>
+    <view class="loadMoreTip" wx:if="{{showLoadMoreTip}}">
+      <text>{{loadMoreTip}}</text>
+    </view>
+  </view>
+  
+  
+
+
+
+

@@ -1,0 +1,116 @@
+/* pages/myCards/createImg/createImg.wxss */
+
+page {
+    position: relative;
+    z-index: 1;
+}
+
+.imgArea {
+     width: 100%;
+    height: 100%; 
+    position: relative;
+    z-index: 10;
+}
+
+.imgs {
+    position: absolute;
+    top: 62rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 680rpx;
+    height: 412rpx;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.06);
+}
+.imgs2 {
+    position: fixed;
+    top:2000rpx; 
+    left:0;
+    width: 1360rpx;
+    height: 824rpx;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.06);
+}
+
+.imgs3{
+    position: fixed;
+    top:2000rpx; 
+    left:0;
+    width: 1360rpx;
+    height: 1360rpx;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.06);
+}
+
+/*三个按钮  */
+
+.createImg-btns {
+    position: fixed;
+    left: 0;
+    bottom: 160rpx;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: 150rpx; */
+}
+
+.createImg-btns-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.createImg-btns .createImg-btns-box .share {
+    width: 230rpx;
+    height: 281rpx;
+    text-align: center;
+}
+
+.createImg-btns .createImg-btns-box .create {
+    margin-right: 70rpx;
+    width: 230rpx;
+    height: 281rpx;
+    text-align: center;
+}
+.createImg-btns .createImg-btns-box image{
+    width: 230rpx;
+    height: 230rpx;
+}
+.createImg-btns .createImg-btns-box .create text,.createImg-btns .createImg-btns-box .share text{
+    margin-top:18rpx;
+    line-height: 33rpx;
+    font-size: 24rpx;
+    color: #445354;
+}
+
+.swiper-box {
+    height: 500rpx;
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+    margin-bottom: -20rpx;
+}
+
+.swiper-box .wx-swiper-dot {
+    width: 30rpx;
+    display: inline-flex;
+    height: 6rpx;
+    margin-left: 12rpx;
+    justify-content: space-between;
+}
+
+.swiper-box .wx-swiper-dot::before {
+    content: '';
+    flex-grow: 1;
+    background-color: #dedede;
+    border-radius: 3rpx;
+}
+
+.swiper-box .wx-swiper-dot-active::before {
+    background-color: #20b6be;
+}
+
+.swiper-item {
+    position: relative;
+    margin: 32rpx auto;
+    width: 680rpx;
+    height: 412rpx;
+    z-index: 10;
+}

@@ -1,0 +1,16 @@
+page {
+    background: #ccc;
+}
+
+.container {
+    padding: 40rpx 0;
+}
+
+.card-container {
+    margin-bottom: 32rpx;
+    padding: 0 32rpx;
+}
+
+.card-container:last-child {
+    margin-bottom: 0;
+}

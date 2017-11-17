@@ -1,0 +1,294 @@
+/* pages/cardClip/cardClip.wxss */
+/*滚动区域  */
+.scrollBox{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.clipBox{
+  width:100%;
+  height:100%;
+}
+/*到底加载更多提示  */
+.loadMoreTip{
+  position:absolute;
+  left:0;
+  bottom:0;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:100%;
+  font-size:28rpx;
+  color:#ccc;
+}
+
+.topSpace{
+  width:100%;
+  height:90rpx;
+}
+.select{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  z-index: 2000;
+}
+/*筛选列表  */
+.select-title-box{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:90rpx;
+  box-shadow: inset 0 -1px 0 0 #ededed;
+}
+.select-title{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  width:100rpx;
+}
+.select-title text{
+  font-size:30rpx;
+  color: #20b6be;
+}
+.select-title image{
+  width:20rpx;
+  height:12.4rpx;
+}
+/*标签title  */
+.label-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:90rpx;
+  background:#fff;
+}
+.label-title .myLabels{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:250rpx;
+  height:100%;
+  font-size:26rpx;
+  color: #445354;
+}
+.label-title .editLabels{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:250rpx;
+  height:100%;
+  font-size:26rpx;
+  color: #445354;
+}
+.label-title-active{
+  color:#20b6be;
+}
+/*公用标签  */
+.label-list-common{
+  display:flex;
+  flex-wrap: wrap;
+  width:650rpx;
+}
+.label-common{
+  margin-left:20rpx;
+  margin-top:40rpx;
+  color: #445354;
+	border-radius: 6rpx;
+	background-color: #f6f6f6;
+	border: solid 1rpx #d8d8d8;
+}
+.label-common text{
+  display: flex;
+  margin:15rpx 20rpx;
+  font-size:26rpx;
+}
+
+
+
+
+/*标签内容  */
+.label-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-bottom:60rpx;
+}
+.label-list .label-list-box{
+  display:flex;
+  flex-wrap: wrap;
+  width:650rpx;
+}
+.label-inner{
+  position:relative;
+  margin-left:20rpx;
+  margin-top:40rpx;
+  color: #445354;
+	border-radius: 6rpx;
+	background-color: #f6f6f6;
+	border: solid 1rpx #d8d8d8;
+}
+.label-inner text{
+  display: flex;
+  margin:15rpx 20rpx;
+  font-size:26rpx;
+}
+.newLabel{
+  border:1rpx dashed #9a9a9d;
+}
+.label-active{
+  color: #20b6be;
+  background-color: #ebffff;
+	border: solid 1px #30bbbb;
+}
+.del-btn{
+  position:absolute;
+  top:-20rpx;
+  right:-20rpx;
+}
+
+
+
+/*完成和重置按钮  */
+.controlBtn{
+  display:flex;
+  width:100%;
+  height:87rpx;
+  background:#fff;
+}
+.controlBtn .resetBtn{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  border-right:0.5rpx solid #e2e2e2;
+  border-top:0.5rpx solid #e2e2e2;
+}
+.controlBtn .resetBtn text{
+  font-size:30rpx;
+  color: #445354;
+}
+.controlBtn .finishBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  border-top:0.5rpx solid #e2e2e2;
+}
+.controlBtn .finishBtn text{
+  font-size:30rpx;
+  color: #445354;
+}
+/*蒙版  */
+.shadow{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity:0.5;
+}
+/*添加分组的modal  */
+.addLabel{
+  position:fixed;
+  top:45%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  width:500rpx;
+  height:282rpx;
+  background: #f9f9f9;
+  border-radius:10rpx;
+  z-index:2003;
+}
+.addLabel .title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:94rpx;
+}
+.addLabel .title text{
+  font-weight: 600;
+  font-size:34rpx;
+  color: #333839;
+}
+.addLabel .input{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:59rpx;
+}
+.addLabel .input input{
+  width:459rpx;
+  height:59rpx;
+  padding-left:10rpx;
+  background:#fff;
+  border: solid 1px #e3e3e3;
+  border-radius: 4rpx;
+  font-size:26rpx;
+  
+}
+/*设置placeholder颜色  */
+.addLabel .input input::-webkit-input-placeholder{
+  color: #9a9a9d;
+}
+.addLabel .input input::-ms-input-placeholder{
+  color: #9a9a9d;
+}
+
+.addLabel .submit{
+  display: flex;
+  width:100%;
+  height:88rpx;
+}
+.addLabel .submit .cancel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  font-size:30rpx;
+  color: #445354;
+  border-top:0.5rpx solid #e2e2e2;
+  border-right:0.5rpx solid #e2e2e2;
+}
+.addLabel .submit .sure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  font-size:30rpx;
+  color: #20b6be;
+  border-top:0.5rpx solid #e2e2e2;
+}
+/*第二个蒙版  */
+.shadow2{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity: 0.5;
+  z-index: 2002;
+}
+/*每个名片排版设置  */
+.cardClass{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  margin-bottom:30rpx;
+}

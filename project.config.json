@@ -1,0 +1,43 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.4",
+	"appid": "wx3342c8ab21314a02",
+	"projectname": "visitingCard",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "分享跳回页面",
+					"pathName": "pages/backPage/backPage",
+					"query": "shareCode=4a022985c5dd11e7a467484d7eb0452e&id=13",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "长按图片识别小程序码",
+					"pathName": "pages/backPage/backPage",
+					"query": "scene=47",
+					"scene": "1048"
+				}
+			]
+		}
+	}
+}

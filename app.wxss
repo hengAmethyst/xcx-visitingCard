@@ -1,0 +1,5 @@
+page{
+    font-family: PingFangSC;
+    width:100%;
+    height:100%;
+}

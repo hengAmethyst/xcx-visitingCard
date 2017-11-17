@@ -1,0 +1,81 @@
+.head-container {
+    position: fixed;
+    width: 750rpx;
+    height: 452rpx;
+    z-index: 10;
+}
+
+.swiper-bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 750rpx;
+    height: 452rpx;
+    z-index: -99;
+}
+
+.card-container {
+    margin: 32rpx auto;
+    width: 680rpx;
+    height: 388rpx;
+}
+
+.edit-panel {
+    padding-top: 452rpx;
+    width: 750rpx;
+}
+
+.edit-container {
+    padding: 30rpx 70rpx 40rpx;
+}
+
+.upload {
+    margin-bottom: 5rpx;
+    background-color: #f6ffff;
+    color: #20b6be;
+    font-size: 30rpx;
+}
+
+.upload::after {
+    border-color: #9dd5d8;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    height: 115rpx;
+    z-index: 1;
+}
+
+.input-wrapper .input-label {
+    display: block;
+    position: absolute;
+    left: 0rpx;
+    top: 1rpx;
+    line-height: 113rpx;
+    color: rgba(82, 112, 113, 0.6);
+    font-size: 30rpx;
+    padding: 0 10rpx;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.input-wrapper input {
+    text-align: right;
+    height: 115rpx;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.4);
+    font-size: 30rpx;
+}
+
+.input-placeholder {
+    color: #445354;
+    font-size: 30rpx;
+}
+
+.confirm {
+    margin-top: 60rpx;
+    background-color: #20b6be;
+    color: #fff;
+    font-size: 30rpx;
+}

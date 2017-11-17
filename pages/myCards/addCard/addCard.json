@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "添加名片",
+    "usingComponents": {
+        "Card": "/common/card/card"
+    }
+}

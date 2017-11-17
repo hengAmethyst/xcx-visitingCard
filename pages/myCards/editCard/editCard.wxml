@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="swiper-container">
+        <image class="swiper-bg" src="../../../imgs/swiper_bg.jpg"></image>
+        <swiper class="swiper-box" bindchange="changeCurrent" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" current="{{current}}">
+            <block wx:for="{{cardList}}">
+                <swiper-item>
+                    <view class="swiper-item">
+                        <Card info="{{item.info}}" type="{{item.type}}"></Card>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="edit-panel">
+    <block wx:for="{{cardList}}">
+        <view class="edit-container" wx:if="{{index === currentIdx}}" wx:key="{{index}}">
+            <button class="upload" catchtap="uploadImg" data-select-idx="{{index}}" hidden="{{item.info.templateName === 'red'}}">上传/更改LOGO</button>
+            <view class="input-wrapper">
+                <text class="input-label">姓名</text>
+                <input type="text" value="{{item.info.name}}" placeholder="请输入姓名" placeholder-class="input-placeholder" bindinput="inputValue" data-category="name" data-idx="{{index}}" ></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">称谓</text>
+                <input type="text" value="{{item.info.position}}" placeholder="请输入称谓" placeholder-class="input-placeholder" bindinput="inputValue" data-category="position" data-idx="{{index}}"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">单位</text>
+                <input type="text" value="{{item.info.company}}" placeholder="请输入单位" placeholder-class="input-placeholder" bindinput="inputValue" data-category="company" data-idx="{{index}}"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">手机</text>
+                <input type="number" value="{{item.info.phone}}" placeholder="请输入手机" placeholder-class="input-placeholder" bindinput="inputValue" data-category="phone" data-idx="{{index}}"  maxlength='11'></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">自定字段1</text>
+                <input type="text" value="{{item.info.otherOne}}" placeholder="请输入自定字段1" placeholder-class="input-placeholder" bindinput="inputValue" data-category="otherOne" data-idx="{{index}}"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">自定字段2</text>
+                <input type="text" value="{{item.info.otherTwo}}" placeholder="请输入自定字段2" placeholder-class="input-placeholder" bindinput="inputValue" data-category="otherTwo" data-idx="{{index}}"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">自定字段3</text>
+                <input type="text" value="{{item.info.otherThree}}" placeholder="请输入自定字段3" placeholder-class="input-placeholder" bindinput="inputValue" data-category="otherThree" data-idx="{{index}}"></input>
+            </view>
+            <button class="confirm" bindtap="submitOverWrite" data-select_submit_id="{{index}}" >确认</button>
+        </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+<view class="container">
+    <view class="head-container">
+        <image class="swiper-bg" src="../../../imgs/swiper_bg.jpg"></image>
+        <view class="card-container">
+            <Card info="{{info}}" type="{{type}}"></Card>
+        </view>
+    </view>
+    <view class="edit-panel">
+        <view class="edit-container">
+            <button class="upload" catchtap="uploadImg" hidden="{{type === 'red'}}">上传/更改LOGO</button>
+            <view class="input-wrapper">
+                <text class="input-label">姓名</text>
+                <input type="text" value="{{info.name}}" placeholder="请输入姓名" placeholder-class="input-placeholder" bindinput="inputValue" data-category="name"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">称谓</text>
+                <input type="text" value="{{info.position}}" placeholder="请输入称谓" placeholder-class="input-placeholder" bindinput="inputValue" data-category="position"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">单位</text>
+                <input type="text" value="{{info.company}}" placeholder="请输入单位" placeholder-class="input-placeholder" bindinput="inputValue" data-category="company"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">手机</text>
+                <input type="number" value="{{info.phone}}" placeholder="请输入手机" placeholder-class="input-placeholder" bindinput="inputValue" data-category="phone" maxlength='11'></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">自定字段1</text>
+                
+                <input type="text" value="{{info.otherOne}}" placeholder="请输入自定字段1" placeholder-class="input-placeholder" bindinput="inputValue" data-category="otherOne"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">自定字段2</text>
+                <input type="text" value="{{info.otherTwo}}" placeholder="请输入自定字段2" placeholder-class="input-placeholder" bindinput="inputValue" data-category="otherTwo"></input>
+            </view>
+            <view class="input-wrapper">
+                <text class="input-label">自定字段3</text>
+                <input type="text" value="{{info.otherThree}}" placeholder="请输入自定字段3" placeholder-class="input-placeholder" bindinput="inputValue" data-category="otherThree"></input>
+            </view>
+            <button wx:if="!submitLoading" class="confirm" bindtap="createNewCard">确认</button>
+            <button wx:else class="confirm">确认</button>
+        </view>
+    </view>
+</view>

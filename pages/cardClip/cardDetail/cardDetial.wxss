@@ -1,0 +1,354 @@
+/* pages/cardClip/cardDetail/cardDetial.wxss */
+page{
+  width:100%;
+  height:100%;
+  background:#ccc;
+}
+.select{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  z-index: 2000;
+}
+/*筛选列表  */
+.select-title-box{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:90rpx;
+  box-shadow: inset 0 -1px 0 0 #ededed;
+}
+.select-title{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  width:160rpx;
+}
+.select-title text{
+  font-size:30rpx;
+  color: #20b6be;
+}
+.select-title image{
+  width:20rpx;
+  height:12.4rpx;
+}
+/*标签title  */
+.label-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:90rpx;
+  background:#fff;
+}
+.label-title .myLabels{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:250rpx;
+  height:100%;
+  font-size:26rpx;
+  color: #445354;
+}
+.label-title .editLabels{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:250rpx;
+  height:100%;
+  font-size:26rpx;
+  color: #445354;
+}
+.label-title-active{
+  color:#20b6be;
+}
+
+/*标签内容  */
+.label-list{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  margin-bottom:60rpx;
+}
+.label-list .label-list-box{
+  display:flex;
+  flex-wrap: wrap;
+  width:650rpx;
+
+}
+.label-inner{
+  position:relative;
+  margin-left:20rpx;
+  margin-top:40rpx;
+  color: #445354;
+	border-radius: 6rpx;
+	background-color: #f6f6f6;
+	border: solid 1rpx #d8d8d8;
+}
+.label-inner text{
+  display: flex;
+  margin:15rpx 20rpx;
+  font-size:26rpx;
+}
+.newLabel{
+  border:1rpx dashed #9a9a9d;
+}
+.label-active{
+  color: #20b6be;
+  background-color: #ebffff;
+	border: solid 1px #30bbbb;
+}
+.del-btn{
+  position:absolute;
+  top:-20rpx;
+  right:-20rpx;
+}
+
+
+
+/*完成和重置按钮  */
+.control-btn{
+  display:flex;
+  width:100%;
+  height:87rpx;
+  background:#fff;
+}
+.reset-btn{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  border-right:0.5rpx solid #e2e2e2;
+  border-top:0.5rpx solid #e2e2e2;
+}
+.control-btn .reset-btn text{
+  font-size:30rpx;
+  color: #445354;
+}
+.control-btn .finish-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  border-top:0.5rpx solid #e2e2e2;
+}
+.control-btn .finish-btn text{
+  font-size:30rpx;
+  color: #445354;
+}
+/*蒙版  */
+.shadow{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity:0.5;
+  z-index:200;
+}
+/*添加分组的modal  */
+.addLabel{
+  position:fixed;
+  top:45%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  width:500rpx;
+  height:282rpx;
+  background: #f9f9f9;
+  border-radius:10rpx;
+  z-index:3000;
+}
+.addLabel .title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:94rpx;
+}
+.addLabel .title text{
+  font-weight: 600;
+  font-size:34rpx;
+  color: #333839;
+}
+.addLabel .input{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:59rpx;
+}
+.addLabel .input input{
+  width:459rpx;
+  height:59rpx;
+  padding-left:10rpx;
+  background:#fff;
+  border: solid 1px #e3e3e3;
+  border-radius: 4rpx;
+  font-size:26rpx;
+  
+}
+/*设置placeholder颜色  */
+.addLabel .input input::-webkit-input-placeholder{
+  color: #9a9a9d;
+}
+.addLabel .input input::-ms-input-placeholder{
+  color: #9a9a9d;
+}
+
+.addLabel .submit{
+  display: flex;
+  width:100%;
+  height:88rpx;
+}
+.addLabel .submit .cancel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  font-size:30rpx;
+  color: #445354;
+  border-top:0.5rpx solid #e2e2e2;
+  border-right:0.5rpx solid #e2e2e2;
+}
+.addLabel .submit .sure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  font-size:30rpx;
+  color: #20b6be;
+  border-top:0.5rpx solid #e2e2e2;
+}
+/*第二个蒙版  */
+.shadow2{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity: 0.5;
+  z-index: 2002;
+}
+/*card详情  */
+.card-detail{
+  position:fixed;
+  top:100rpx;
+  left:0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+.card-detail .card-detail-class{
+  margin-top:20rpx;
+}
+.editBox{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  width:100%;
+  margin-top:50rpx;
+}
+.editBox .editTip{
+  width: 680rpx;
+	height: 258rpx;
+  padding-left:32rpx;
+  padding-top:20rpx;
+  background:#fff;
+  font-size:30rpx;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.06);
+  border-radius:6rpx;
+}
+.editBox .sanjiaoxing{
+    position:absolute;
+    top:-30rpx;
+    left:75rpx;
+    width: 0;
+    height: 0;
+    border-left: 30rpx solid transparent;
+    border-right: 30rpx solid transparent;
+    border-bottom: 40rpx solid #fff;
+}
+
+/*各种按钮  */
+.controlBtn{
+  display: flex;
+  justify-content: space-between;
+  width:530rpx;
+  height:220rpx;
+  margin-top:130rpx;
+}
+.del{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  width:130rpx;
+  height:100%;
+  font-size:24rpx;
+  color: #445354;
+}
+.del image{
+  width:130rpx;
+  height:130rpx;
+  margin-top:30rpx;
+}
+
+.submit-save{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  width:170rpx;
+  height:100%;
+  font-size:24rpx;
+  color: #445354;
+}
+.submit-save image{
+  width:170rpx;
+  height:170rpx;
+}
+
+.share{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  width:130rpx;
+  height:100%;
+  font-size:24rpx;
+  color: #445354;
+}
+.share image{
+  width:130rpx;
+  height:130rpx;
+}
+.share .share-btn {
+  margin-top:30rpx; 
+  padding: 0;
+  width:130rpx; 
+  height:130rpx; 
+  border-radius: 130rpx;
+}
+/*蒙版  */
+.shadow{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:black;
+  opacity: 0.5;
+}
